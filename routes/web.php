@@ -16,6 +16,8 @@ Route::get('/cuel-back', [App\Http\Controllers\CueLController::class, 'back']);
 Route::resource('todos', App\Http\Controllers\TODOController::class);
 Route::patch('todos/{todo}/toggle', [App\Http\Controllers\TODOController::class, 'toggle'])->name('todos.toggle');
 
+Route::get('/test2', [App\Http\Controllers\test2Controller::class, 'index']);
+
 // React アプリケーション
 Route::get('/react', function () {
     return view('react-app');
