@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* 自作CSS */
+.pull-request-card {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pull-request-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+}
+
+.pull-request-card:visited {
+    color: inherit;
+}
+
+/* ダークモードスタイル */
+[data-bs-theme="dark"] .pull-request-card {
+    background-color: var(--bs-dark);
+    border-color: var(--bs-gray-700);
+}
+
+[data-bs-theme="dark"] .pull-request-card:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    background-color: var(--bs-gray-800);
+}
+
+/* ダークモード切り替えボタン */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* ダークモード用の追加スタイル */
+[data-bs-theme="dark"] {
+    --bs-body-bg: #121212;
+    --bs-body-color: #ffffff;
+}
+
+[data-bs-theme="dark"] .card {
+    background-color: var(--bs-gray-800);
+    border-color: var(--bs-gray-700);
+    color: var(--bs-light);
+}
+
+[data-bs-theme="dark"] .card-header {
+    background-color: var(--bs-gray-900);
+    border-bottom-color: var(--bs-gray-700);
+}
+
+[data-bs-theme="dark"] .text-muted {
+    color: var(--bs-gray-400) !important;
+}
+
+[data-bs-theme="dark"] .bg-primary {
+    background-color: var(--bs-indigo) !important;
+}

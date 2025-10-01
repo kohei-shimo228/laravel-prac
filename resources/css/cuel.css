@@ -1,0 +1,28 @@
+/* CueL専用のCSS */
+.pull-request-card {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pull-request-card:hover {
+    transform:scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+}
+
+.pull-request-card:visited {
+    color: inherit;
+}
+
+/* 追加のスタイル例 */
+.pr-title {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.pr-user {
+    font-size: 0.9rem;
+    color: #718096;
+}
