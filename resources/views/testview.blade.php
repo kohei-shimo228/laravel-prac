@@ -8,7 +8,11 @@
         <h1>testview.blade.php</h1>
         <p>このビューはapp/Http/Controllers/test2Controller.phpから呼び出されているよ。</p>
         <p>addedmodel.phpからret_contents()を呼び出しているよ。</p>
-        <p>{{ $addedmodel->ret_contents() }}</p>
         <p>このビューはresources/views/testview.blade.phpにあるよ</p>
+        <ul>
+            <li>/resources/views/testview.blade.php</li>
+            <li>/app/Http/Controllers/test2Controller.php</li>
+            <li>/app/Models/addedmodel.php</li>
+        </ul>
     </div>
 @endsection
